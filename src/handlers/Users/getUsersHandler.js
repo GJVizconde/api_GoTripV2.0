@@ -2,9 +2,9 @@ const searchUserByName = require('../../controllers/Users/searchUserByName');
 const getAllUsers = require('../../controllers/Users/getAllUsers');
 
 const getUsersHandler = async (req, res) => {
-  // const { name } = req.query;
+  const { name } = req.query;
 
-  console.log(name);
+  // console.log(name);
 
   try {
     const results = name ? await searchUserByName(name) : await getAllUsers();
